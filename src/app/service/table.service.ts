@@ -13,13 +13,6 @@ export class TableService {
 
   apiURL = 'http://localhost:8080/table';
 
-
-  getTables2() {
-    return this.httpClient.get<TableModel[]>(`${this.apiURL}`).subscribe((res => {
-      console.log(res);
-    }));
-  }
-
   getTables(): Observable<TableModel[]> {
     return this.httpClient.get<TableModel[]>(this.apiURL);
 

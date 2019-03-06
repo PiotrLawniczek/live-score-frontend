@@ -1,47 +1,23 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-  <ng-container matColumnDef="team">
-    <th mat-header-cell *matHeaderCellDef> Team</th>
-    <td mat-cell *matCellDef="let element"> {{element.team}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="games">
-    <th mat-header-cell *matHeaderCellDef> Games</th>
-    <td mat-cell *matCellDef="let element"> {{element.games}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="points">
-    <th mat-header-cell *matHeaderCellDef> Points</th>
-    <td mat-cell *matCellDef="let element"> {{element.points}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="wins">
-    <th mat-header-cell *matHeaderCellDef> Wins</th>
-    <td mat-cell *matCellDef="let element"> {{element.wins}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="looses">
-    <th mat-header-cell *matHeaderCellDef> Looses</th>
-    <td mat-cell *matCellDef="let element"> {{element.looses}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="draws">
-    <th mat-header-cell *matHeaderCellDef> draws</th>
-    <td mat-cell *matCellDef="let element"> {{element.draws}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="goalsScored">
-    <th mat-header-cell *matHeaderCellDef> goalsScored</th>
-    <td mat-cell *matCellDef="let element"> {{element.goalsScored}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="goalsConceded">
-    <th mat-header-cell *matHeaderCellDef> goalsConceded</th>
-    <td mat-cell *matCellDef="let element"> {{element.goalsConceded}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-toolbar color="primary">
+<span class="fill-remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="/table">
+        <mat-icon>home</mat-icon>
+        <span>Table</span>
+      </button>
+      <button mat-menu-item routerLink="/timetable">
+        <mat-icon>people_outline</mat-icon>
+        <span>Timetable</span>
+      </button>
+    </mat-menu>
+  </span>
+<span class="fill-remaining-space">Pjoter miszcz</span>
+</mat-toolbar>
 <router-outlet></router-outlet>
+
+
+

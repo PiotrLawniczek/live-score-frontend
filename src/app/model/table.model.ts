@@ -1,4 +1,3 @@
-
 export class TableModel {
   team: String;
   games: String;
