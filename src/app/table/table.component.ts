@@ -10,13 +10,12 @@ import {TableService} from '../service/table.service';
 })
 export class TableComponent implements OnInit {
   displayedColumns: string[] = ['place', 'team', 'games', 'points', 'wins' , 'looses', 'draws', 'goalsScored', 'goalsConceded'];
-  table: TableModel[];
+  /*table: TableModel[];*/d
   dataSource = this.tableService.getTables();
   constructor(private tableService: TableService) { }
 
   ngOnInit() {
-    this.tableService.getTables().subscribe(data => this.table = data);
-
+     /*this.tableService.getTables().subscribe(data => this.table = data);*/
   }
 
 }

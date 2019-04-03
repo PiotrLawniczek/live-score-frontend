@@ -11,7 +11,7 @@ export class TableService {
   constructor(private httpClient: HttpClient) {
   }
 
-  apiURL = 'http://localhost:8080/table';
+  apiURL = 'https://live-score-backend.herokuapp.com/table';
 
   getTables(): Observable<TableModel[]> {
     return this.httpClient.get<TableModel[]>(this.apiURL);

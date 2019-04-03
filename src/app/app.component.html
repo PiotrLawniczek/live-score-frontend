@@ -1,23 +1,10 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<mat-toolbar color="primary">
-<span class="fill-remaining-space">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item routerLink="/table">
-        <mat-icon>home</mat-icon>
-        <span>Table</span>
-      </button>
-      <button mat-menu-item routerLink="/timetable">
-        <mat-icon>people_outline</mat-icon>
-        <span>Timetable</span>
-      </button>
-    </mat-menu>
-  </span>
-<span class="fill-remaining-space">Pjoter miszcz</span>
-</mat-toolbar>
+
+<app-navigation></app-navigation>
 <router-outlet></router-outlet>
+
+
+
 
 
 
