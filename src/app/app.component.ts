@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FacebookService, InitParams } from 'ngx-facebook';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +11,10 @@ export class AppComponent implements OnInit {
 
   constructor(
     private _iconRegistry: MatIconRegistry,
-    private _sanitizer: DomSanitizer,
-    private facebookService: FacebookService) {
-
+    private _sanitizer: DomSanitizer) {
   }
   ngOnInit() {
     this.loadIcons();
-    this.initFacebookService();
-  }
-
-  private initFacebookService(): void {
-    const initParams: InitParams = { xfbml: true, version: 'v3.2' };
-    this.facebookService.init(initParams);
   }
 
   private loadIcons() {

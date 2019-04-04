@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { TableComponent } from './table/table.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { FacebookModule } from 'ngx-facebook';
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    MaterialModule,
-    FacebookModule.forRoot(),
+    MaterialModule
   ],
   providers: [TableService],
   bootstrap: [AppComponent]
